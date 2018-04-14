@@ -2,7 +2,7 @@ package javadev.core.fangSql.util;
 
 public class Utils {
     /**
-     * ��SQL���ת����Java��� hot_document_id --> hotDocumentId
+     * SQL到Java转换 hot_document_id --> hotDocumentId
      */
     public static String sqlToJava(String field) {
         String[] a = field.split("_");

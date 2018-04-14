@@ -88,6 +88,8 @@ public class FangSqlHelper {
 
     /**
      * 插入
+     * include: 只插入哪些字段
+     * exclude: 不插入哪些字段
      */
     public int insert(Object bean, String table, String include, String exclude) {
         StringBuilder sql = new StringBuilder();
@@ -130,6 +132,8 @@ public class FangSqlHelper {
 
     /**
      * 更新
+     * include: 只更新哪些字段
+     * exclude: 不更新哪些字段
      */
     public int update(Object bean, String table, String include, String exclude, String where, Object... parameters) {
         List<Object> values = new ArrayList<Object>();

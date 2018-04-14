@@ -30,7 +30,7 @@ public class FangJdbcTemplate extends JdbcTemplate {
         return requiredSingleResult(results);
     }
 
-    // 重写JdbcTemplate，当queryForObject查询结果为0时，返回0而不是抛出异常
+    // 重写JdbcTemplate，当queryForObject查询结果为0时，返回null而不是抛出异常
     @Override
     public Map<String, Object> queryForMap(String sql, Object... args) throws DataAccessException {
         try {
