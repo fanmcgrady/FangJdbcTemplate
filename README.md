@@ -1,0 +1,2 @@
+# FangJdbcTemplate
+对Spring中jdbcTemplate进行封装，方便对Bean实体的insert和update操作
