@@ -1,7 +1,7 @@
 package javadev.core.fangSql.helper;
 
 import javadev.core.fangSql.FangJdbcTemplate;
-import javadev.core.fangSql.util.Utils;
+import javadev.core.fangSql.util.BeanUtils;
 import org.springframework.jdbc.core.BeanPropertyRowMapper;
 
 import java.lang.reflect.Method;
@@ -117,7 +117,7 @@ public class FangSqlHelper {
                 sql.append(d);
                 sql.append("?");
 
-                Method getter = getters.get(Utils.sqlToJava(column));
+                Method getter = getters.get(BeanUtils.sqlToJava(column));
                 values.add(getter.invoke(bean));
 
                 d = ", ";
@@ -155,7 +155,7 @@ public class FangSqlHelper {
                 sql.append(column);
                 sql.append(" = ?");
 
-                Method getter = getters.get(Utils.sqlToJava(column));
+                Method getter = getters.get(BeanUtils.sqlToJava(column));
                 values.add(getter.invoke(bean));
 
                 d = ", ";
